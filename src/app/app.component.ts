@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'cm-root',
+  template: `<app-buscador></app-buscador>`,
 })
-export class AppComponent {
-  title = 'caribe-challengue';
+
+export class AppComponent{
+
 }
