@@ -4,10 +4,10 @@
             <form action="">
                 <div class="form-group">
                     <label for="">Holaaa</label>
-                    <input type="text" placeholder="Puedes buscar una empresa" class="form-control">
+                    <input #inputBuscador type="text" (keyup)="onSearch(inputBuscador.value)" placeholder="Puedes buscar una empresa" class="form-control">
                 </div>
             </form>
         </div>
     </div>
-    <app-lista-negocio></app-lista-negocio>
+    <router-outlet></router-outlet>
 </div>

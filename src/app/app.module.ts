@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { FiltroPipe } from './filtro.pipe';
 import { ListaNegocioComponent } from './lista-negocio/lista-negocio.component';
+import { DetalleNegocioComponent } from './detalle-negocio/detalle-negocio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BuscadorComponent,
     FiltroPipe,
-    ListaNegocioComponent
+    ListaNegocioComponent,
+    DetalleNegocioComponent
   ],
   imports: [
     BrowserModule,
