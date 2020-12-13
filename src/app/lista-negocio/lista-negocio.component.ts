@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Negocios } from '../negocios';
+import { NegociosService } from '../servicios/negocios.service';
 
 @Component({
   selector: 'app-lista-negocio',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaNegocioComponent implements OnInit {
 
-  constructor() { }
+  negocio: Negocios[];
+  constructor(private negociosService: NegociosService) { }
 
   ngOnInit(): void {
+    this.negociosService.getNegocios()
+    .subscribe((negocios: Negocios[]) => {
+      this.negocio = negocios;
+      console.log(negocios);
+    });
   }
 
 }

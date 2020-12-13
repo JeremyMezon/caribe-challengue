@@ -3,4 +3,5 @@ export interface Negocios {
     name: string;
     country: string;
     website: string;
+    logo: string;
 }
