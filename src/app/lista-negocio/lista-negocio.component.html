@@ -1,13 +1,30 @@
-<div class="row">
-    <div class="col-12 co-lg-6" *ngFor="let item of negocio">
-        <div class="caja-negocio my-3 d-flex align-items-center">
-            <div class="imagen">
-                <img src={{item.logo}} class="img-fluid" alt="">
+<nav class="buscador bg-header">
+    <div class="fondo-oscuro"></div>
+    <div class="container-fluid container-md">
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <h3 class="h1">What Are You Intersted In Shops</h3>
+                    <p>Discover the best places to stay, eat, shop & visit the city nearest to you.</p>
+                    <input #inputBuscador name="filtroNombre" [(ngModel)]="filtroNombre" type="text" placeholder="Puedes buscar una empresa" class="form-control">    
+                </div>
             </div>
-            <div class="contenido-negocio p-3">
-                <a href=""><h4>{{item.name}}</h4></a>
-                <small>{{item.country}}</small>
-                <a href={{item.website}} class="d-block" target="_blank">{{item.website}}</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6" *ngFor="let item of negocio | filtro:filtroNombre">
+            <div class="caja-negocio my-3 d-flex align-items-center">
+                <div class="imagen">
+                    <img src={{item.logo}} class="img-fluid" alt="">
+                </div>
+                <div class="contenido-negocio p-3">
+                    <a href=""><h4>{{item.name}}</h4></a>
+                    <small>{{item.country}}</small>
+                    <a href={{item.website}} class="d-block mt-5" target="_blank">{{item.website}}</a>
+                </div>
             </div>
         </div>
     </div>

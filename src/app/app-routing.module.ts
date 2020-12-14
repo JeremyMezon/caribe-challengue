@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: "Negocio",
     component: DetalleNegocioComponent
+  },
+  {
+    path: "",
+    component: ListaNegocioComponent
   }
 ];
 

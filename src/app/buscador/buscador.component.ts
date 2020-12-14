@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-buscador',
@@ -8,17 +8,17 @@ import { Router } from '@angular/router';
 })
 export class BuscadorComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(/*private router: Router*/) { }
 
   ngOnInit(): void {
   }
 
-  onSearch(value: string){
-    if(value){
-      this.router.navigate(['/Lista'],{
-        queryParams: {q: value},
-      });
-    }
-  }
+  // onSearch(value: string){
+  //   if(value){
+  //     this.router.navigate(['/Lista'],{
+  //       queryParams: {q: value},
+  //     });
+  //   }
+  // }
 
 }

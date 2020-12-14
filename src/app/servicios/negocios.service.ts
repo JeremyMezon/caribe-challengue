@@ -9,7 +9,10 @@ import { environment } from 'src/environments/environment';
 })
 export class NegociosService {
 
+  
   constructor(private httpClient: HttpClient) { }
+
+  private rutaApi = environment.baseUrlAPI;
 
   buscarNegocio(query = ''){
     return this.httpClient.get<Negocios[]>(`${environment.baseUrlAPI}/name=${query}`)
@@ -21,6 +24,10 @@ export class NegociosService {
 
   getNegocios(): Observable<Negocios[]>{
     return this.httpClient.get<Negocios[]>(`${environment.baseUrlAPI}`)
+  }
+
+  getTodo(){
+    return this.httpClient.get(this.rutaApi);
   }
 
 }
